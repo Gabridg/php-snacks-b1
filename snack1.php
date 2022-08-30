@@ -52,6 +52,7 @@ $nba_matches = [
                     -
                     <?= $nba_matches[$i]['pointsT2'] ?>
                 </span>
+   
             </li>
             <?php endfor; ?>
         </ul>
