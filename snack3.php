@@ -45,6 +45,12 @@ $posts = [
     ],
 ];
 
+$post_date = array_keys($posts);
+
+for($i = 0; $i < count($post_date); $i++){
+    $date = $post_date[$i];
+    var_dump($posts[$date]);
+}
 
 ?>
 <!DOCTYPE html>
@@ -57,13 +63,6 @@ $posts = [
 </head>
 <body>
     <h1>post</h1>
-    <?php for($i = 0; $i < count($posts); $i++) : ?>
-        <?php $posts[$i] == $post ?>
-        <?php for($j = 0; $j < count($post); $j++) : ?>
-            <p><?= $post[$j]['title'] ?></p>
-            <p><?= $post[$j]['author'] ?></p>
-            <p><?= $post[$j]['text'] ?></p>
-        <?php endfor; ?>
-    <?php endfor; ?>
+   
 </body>
 </html>
