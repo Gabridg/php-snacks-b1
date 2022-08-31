@@ -44,13 +44,7 @@ $posts = [
         ]
     ],
 ];
-
 $post_date = array_keys($posts);
-
-for($i = 0; $i < count($post_date); $i++){
-    $date = $post_date[$i];
-    var_dump($posts[$date]);
-}
 
 ?>
 <!DOCTYPE html>
@@ -62,7 +56,20 @@ for($i = 0; $i < count($post_date); $i++){
     <title>Document</title>
 </head>
 <body>
-    <h1>post</h1>
-   
+    <h1>POST:</h1>
+    <?php for($i = 0; $i < count($post_date); $i++) {
+        $date = $post_date[$i];
+        $original_post = $posts[$date];
+    ?>
+    <section>
+        <?php for($j =0;$j < count($original_post); $j++) {?>
+        <article>
+            <h2><?= $original_post[$j]['title']?></h2>
+            <p><?= $original_post[$j]['text']?></p>
+            <address><?= $original_post[$j]['author']?></address>
+        </article>
+        <?php } ?>
+    </section>
+    <?php } ?>
 </body>
 </html>
