@@ -1,6 +1,6 @@
 <?php 
 $min = 1;
-$max = 10;
+$max = 100;
 $quantity_of_numbers = 15;
 
 $numbers= [];
